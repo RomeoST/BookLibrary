@@ -1,0 +1,27 @@
+﻿@model IEnumerable<BookLibrary.Models.Book>
+@{
+    ViewBag.Title = "Book";
+}
+
+<div class="container">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <table class="table">
+            <tr>
+                <td>#</td>
+                <td>Name</td>
+                <td>Author</td>
+            </tr>
+            @foreach(var book in Model)
+            {
+                <tr>
+                    <td>@book.Id</td>
+                    <td>@book.Name</td>
+                    <td>@book.Author.FullName</td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+
