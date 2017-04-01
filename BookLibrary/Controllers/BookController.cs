@@ -13,7 +13,6 @@ namespace BookLibrary.Controllers
         // GET: Book
         public ActionResult Index()
         {
-
             return View(context.Books.ToList());
         }
     }
