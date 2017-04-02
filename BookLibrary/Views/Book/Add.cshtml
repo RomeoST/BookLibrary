@@ -1,0 +1,29 @@
+﻿<div id="modalAddBook" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">X</button>
+                <h4 class="modal-title">Add book</h4>
+            </div>
+            @using (Ajax.BeginForm("Add", new AjaxOptions { OnSuccess= "OnSuccess2" }))
+            {
+                <div class="modal-body">
+                    @Html.AntiForgeryToken()
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            @Html.Label("NameL", new { @class = "col-md-2 control-label" })
+                            @Html.Editor("Name", new { htmlAttributes = new { @class = "col-md-10 form-control" } })
+                        </div>
+                        <div class="form-group">
+                            @Html.Label("Author", new { @class = "col-md-2 control-label" })
+                            @Html.DropDownList("selectAuthor", (IEnumerable<SelectListItem>)ViewBag.Authors, new { @class = "form-control col-md-10" })
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input class="btn btn-default" type="submit"  value="Добавить"/>
+                </div>
+            }
+        </div>
+    </div>
+</div>

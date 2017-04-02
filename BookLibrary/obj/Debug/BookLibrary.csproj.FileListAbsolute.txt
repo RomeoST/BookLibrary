@@ -46,6 +46,5 @@ C:\Users\agent\Documents\Visual Studio 2017\Projects\ASP\BookLibrary\BookLibrary
 C:\Users\agent\Documents\Visual Studio 2017\Projects\ASP\BookLibrary\BookLibrary\bin\System.Web.Webpages.Razor.xml
 C:\Users\agent\Documents\Visual Studio 2017\Projects\ASP\BookLibrary\BookLibrary\bin\System.Web.Helpers.xml
 C:\Users\agent\Documents\Visual Studio 2017\Projects\ASP\BookLibrary\BookLibrary\bin\System.Web.Mvc.xml
-C:\Users\agent\Documents\Visual Studio 2017\Projects\ASP\BookLibrary\BookLibrary\obj\Debug\BookLibrary.csprojResolveAssemblyReference.cache
 C:\Users\agent\Documents\Visual Studio 2017\Projects\ASP\BookLibrary\BookLibrary\obj\Debug\BookLibrary.dll
 C:\Users\agent\Documents\Visual Studio 2017\Projects\ASP\BookLibrary\BookLibrary\obj\Debug\BookLibrary.pdb

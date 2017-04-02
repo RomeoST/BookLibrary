@@ -3,6 +3,15 @@
     ViewBag.Title = "Book";
 }
 
+<script>
+    function OnSuccess(data) {
+        $("#modalAddBook").modal();
+    }
+    function OnSuccess2(data) {
+        $("<tr><td>" + data.Id + "</td><td>" + data.Name + "</td><td>" + data.Author.FullName + "</td><td><a href='/Book/Edit/" + data.Id + "'>Edit</a></td></tr>").insertAfter($("tr:last"));
+    }
+</script>
+
 <div class="container">
     <div class="col-md-4"></div>
     <div class="col-md-4">
@@ -11,6 +20,7 @@
                 <td>#</td>
                 <td>Name</td>
                 <td>Author</td>
+                <td></td>
             </tr>
             @foreach(var book in Model)
             {
@@ -18,9 +28,12 @@
                     <td>@book.Id</td>
                     <td>@book.Name</td>
                     <td>@book.Author.FullName</td>
+                    <td>@Html.RouteLink("Edit", new { action="Edit", id=book.Id})</td>
                 </tr>
             }
         </table>
+        <p class="text-center">@Ajax.ActionLink("Add book", "Add", new AjaxOptions { UpdateTargetId="modalAdd", OnSuccess="OnSuccess"})</p>
+        <div id="modalAdd"></div>
     </div>
     <div class="col-md-4"></div>
 </div>
